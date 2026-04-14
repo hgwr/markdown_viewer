@@ -1,0 +1,202 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  padding: 10px 20px;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #cba6f7;
+  letter-spacing: 0.05em;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pane + .pane {
+  border-left: 1px solid #313244;
+}
+
+.pane-header {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6c7086;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  flex-shrink: 0;
+}
+
+.editor {
+  flex: 1;
+  padding: 20px;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+.editor::placeholder {
+  color: #45475a;
+}
+
+.preview {
+  flex: 1;
+  padding: 20px 28px;
+  overflow-y: auto;
+  background: #1e1e2e;
+  line-height: 1.7;
+}
+
+/* Markdown preview styles */
+.preview h1,
+.preview h2,
+.preview h3,
+.preview h4,
+.preview h5,
+.preview h6 {
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+  color: #cba6f7;
+  line-height: 1.3;
+}
+
+.preview h1 { font-size: 1.9em; border-bottom: 1px solid #313244; padding-bottom: 0.3em; }
+.preview h2 { font-size: 1.5em; border-bottom: 1px solid #313244; padding-bottom: 0.2em; }
+.preview h3 { font-size: 1.2em; }
+
+.preview p {
+  margin-bottom: 1em;
+  color: #cdd6f4;
+}
+
+.preview a {
+  color: #89dceb;
+  text-decoration: none;
+}
+
+.preview a:hover {
+  text-decoration: underline;
+}
+
+.preview strong {
+  color: #f5c2e7;
+  font-weight: 700;
+}
+
+.preview em {
+  color: #fab387;
+}
+
+.preview del {
+  color: #6c7086;
+}
+
+.preview ul,
+.preview ol {
+  margin-bottom: 1em;
+  padding-left: 1.8em;
+}
+
+.preview li {
+  margin-bottom: 0.3em;
+}
+
+.preview li input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.preview blockquote {
+  border-left: 4px solid #cba6f7;
+  padding: 0.4em 1em;
+  margin: 1em 0;
+  background: #181825;
+  border-radius: 0 6px 6px 0;
+  color: #a6adc8;
+}
+
+.preview code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.88em;
+  background: #313244;
+  color: #a6e3a1;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.preview pre {
+  background: #181825;
+  border: 1px solid #313244;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.preview pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.9em;
+  color: #cdd6f4;
+}
+
+.preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+}
+
+.preview th,
+.preview td {
+  border: 1px solid #313244;
+  padding: 0.5em 0.9em;
+  text-align: left;
+}
+
+.preview th {
+  background: #181825;
+  color: #cba6f7;
+  font-weight: 600;
+}
+
+.preview tr:nth-child(even) {
+  background: #181825;
+}
+
+.preview hr {
+  border: none;
+  border-top: 1px solid #313244;
+  margin: 1.5em 0;
+}
+
+.preview img {
+  max-width: 100%;
+  border-radius: 6px;
+}
